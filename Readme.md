@@ -16,6 +16,14 @@ sudo apt-get install oracle-java8-installer junit4
 #sudo apt-get install default-jdk
 ```
 
+## Codenvy
+
+```bash
+sudo apt-get update
+sudo apt-get install junit4 ant
+```
+
+
 ## Run
 
 ```bash
