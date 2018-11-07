@@ -1,4 +1,6 @@
-package javaapplication.me.org;
+package org.me;
+
+import org.joda.time.LocalTime;
 
 /**
  * The main class
@@ -12,6 +14,9 @@ public class JavaApplicationMeOrg {
      */
     public static void main ( String[] args ) {
         System.out.println ("Hello World");
+
+        LocalTime currentTime = new LocalTime();
+        System.out.println("The current local time is: " + currentTime);
 
         Animal crocodile = new Animal ("Fred", 4, 20);
         System.out.println (String.format (

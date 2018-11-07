@@ -1,4 +1,4 @@
-package javaapplication.me.org;
+package org.me;
 
 /**
  * A Sample Class
