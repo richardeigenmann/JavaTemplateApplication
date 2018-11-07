@@ -6,14 +6,19 @@ create a project with a unit test all set up.
 ## Now Gradelified!
 
 ```bash
+gradle run
+
 # to build and run
-gradle shadow
-java -jar java -jar build/libs/JavaTemplateApplication-all.jar
+gradle shadowJar
+java -jar build/libs/JavaTemplateApplication-all.jar
 
 gradle test
 
 gradle javadoc
 google-chrome ./build/docs/javadoc/index.html
+
+gradle test jacocoTestReport
+google-chrome ./build/reports/jacoco/test/html/index.html
 ```
 
 ## Ant
