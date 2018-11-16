@@ -5,6 +5,10 @@ plugins {
   id 'jacoco'
 }
 
+jacoco {
+    toolVersion = "0.8.2"
+}
+
 mainClassName = "org.me.JavaApplicationMeOrg"
 
 repositories {
