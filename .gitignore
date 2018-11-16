@@ -7,3 +7,7 @@ nbdist/
 .gradle/
 .vscode/
 .jacocoverage/
+.classpath
+.project
+.settings
+bin
