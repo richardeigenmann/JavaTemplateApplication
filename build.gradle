@@ -1,15 +1,14 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version '5.0.0'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
     id 'java'
     id 'application'
     id 'jacoco'
-    id "com.github.ben-manes.versions" version "0.21.0"
+    id "com.github.ben-manes.versions" version "0.28.0"
 
 }
 
-//jacoco {
-//    toolVersion = "0.8.2"
-//}
+sourceCompatibility = 14
+targetCompatibility = 14
 
 jacocoTestReport {
     group 'verification'
@@ -29,18 +28,19 @@ repositories {
 }
 
 dependencies {
-    // compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
-    implementation "joda-time:joda-time:2.10.2"
+    implementation "joda-time:joda-time:2.10.5"
     testImplementation group: 'junit', name: 'junit', version: '4.+'
 }
 
 
 jar {
-    //baseName = 'myjar'
-    //version =  '0.1.0'
     manifest {
         attributes 'Main-Class': 'org.me.JavaApplicationMeOrg'
     }
+}
+
+shadowJar {
+    destinationDirectory=file("$buildDir/shadowJar")
 }
 
 task hello {
@@ -51,4 +51,14 @@ task hello {
 
 wrapper {
     gradleVersion = '6.3-rc-1' //version required
+}
+
+task jpackage(type: Exec, dependsOn: 'shadowJar') {
+    commandLine System.properties['java.home'] + "/bin/jpackage",
+            '--name', 'Animal',
+            '--app-version', '1',
+            '--input', "$buildDir/shadowJar",
+            '--main-jar', "JavaTemplateApplication-all.jar",
+            '--dest', "$buildDir/jdepend"
+    environment << [JPACKAGE_DEBUG: true]
 }
