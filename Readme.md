@@ -3,7 +3,11 @@
 This is a simple Java Project Template for Netbeans which allows me to quickly
 create a project with a unit test all set up.
 
-## Now Gradelified!
+## Now with JDK-14 packaging}
+
+With Gradle 6 and JDK/14 we get the jpackage task which creates RPM packages on Linux and msi packages on Windows.
+
+## Gradelified
 
 ```bash
 gradle run
@@ -31,6 +35,8 @@ ant test
 
 ## Cloud 9
 
+https://aws.amazon.com/cloud9
+
 ```bash
 sudo vim /etc/apt/sources.list # then add
 deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
@@ -43,6 +49,8 @@ sudo apt-get install oracle-java8-installer junit4
 ```
 
 ## Codenvy
+
+https://codenvy.com
 
 ```bash
 sudo apt-get update
