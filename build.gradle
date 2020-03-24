@@ -50,7 +50,7 @@ task hello {
 }
 
 wrapper {
-    gradleVersion = '6.3-rc-1' //version required
+    gradleVersion = '6.3-rc-4' //version required
 }
 
 task jpackage(type: Exec, dependsOn: 'shadowJar') {

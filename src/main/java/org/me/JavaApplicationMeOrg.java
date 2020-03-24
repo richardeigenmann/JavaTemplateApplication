@@ -22,6 +22,7 @@ public class JavaApplicationMeOrg {
         System.out.println (String.format (
                 "Animal %s has %d legs and a speed of %d", crocodile.getName (),
                 crocodile.getLegs (), crocodile.getSpeed ()));
+        new MyDialog();
     }
 
 }
